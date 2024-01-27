@@ -19,9 +19,8 @@ const validatePatientData = (data) => {
         errors.phone_number = "Invalid phone number"
     }
 
-    // const passwordRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
-    // if (!password || !passwordRegex.test(password)) {
-    if (!password || password.length < 8 || password.length > 15) {
+    const passwordRegex = /^(?=.*[A-Z])(?=.*[a-z])(?=.*\d).{8,15}$/
+    if (!password || !passwordRegex.test(password)) {
         errors.password = "password must contain one upper, one lower character and a number. Max length 15 and min length 8"
     }
     // if (!photo) {
