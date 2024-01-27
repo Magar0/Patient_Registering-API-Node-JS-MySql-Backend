@@ -28,6 +28,7 @@ const fetchDataOfHospital = async (req, res) => {
     try {
         const { hospital_id } = req.body;
         console.log("ok");
+
         const [result1] = await db.pool.query("SELECT h.name as hospital_name, COUNT(*) as total_psychiatrists FROM hospitals h LEFT JOIN psychiatrists p ON h.id = p.hospital_id where h.id=?", [hospital_id]);
         const [result2] = await db.pool.query("SELECT COUNT(*) as total_patients FROM hospitals h LEFT JOIN patients pat ON h.id=pat.hospital_id WHERE h.id=?", [hospital_id]);
         const [result3] = await db.pool.query("SELECT p.id, p.name, COUNT(*) as patients_count FROM psychiatrists p LEFT JOIN patients pat ON p.id= pat.psychiatrist_id WHERE p.hospital_id=? GROUP BY p.id;", [hospital_id]);
