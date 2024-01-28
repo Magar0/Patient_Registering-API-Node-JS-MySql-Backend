@@ -17,6 +17,8 @@ Then add Sample Data by running DummmyData.sql in MySql.
 run `npm init` in thre root directory to install all the required packages.
 run `npm start` to start the server.
 
+[<img src="https://run.pstmn.io/button.svg" alt="Run In Postman" style="width: 128px; height: 32px;">](https://app.getpostman.com/run-collection/30927476-e1c07127-78c4-4906-9a22-33feb575c7c2?action=collection%2Ffork&source=rip_markdown&collection-url=entityId%3D30927476-e1c07127-78c4-4906-9a22-33feb575c7c2%26entityType%3Dcollection%26workspaceId%3D7e7f5a37-91e1-49c8-9a26-47d0b12ebbac)
+
 # Libraries/ Framework used
 
 <ul>
